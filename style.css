@@ -1,0 +1,398 @@
+body{
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+h1{
+    color: rgb(241, 241, 241);
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 30px;
+    display: flex;
+    text-align: center;
+}
+header {
+    background-color: #2575fc;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-branding {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.logo-branding-link {
+    text-decoration: none;
+}
+.logo-text {
+    color: white;
+    font-size: 1.5em; 
+    font-weight: bold;
+    margin-bottom: 2px;
+    text-decoration: none;
+}
+.logo-icon {
+    color: white;
+    position: relative;
+    top: -2px; 
+    font: 900x;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 0 5px;
+}
+  
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    width: 200px;
+    border-radius: 20px;
+}
+  .search-bar button {
+    background-color: white;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 25px 25px 25px 25px;
+}
+  .search-bar button:hover {
+    background-color: #2575fc;
+    
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+  
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+  
+nav a:hover {
+    text-shadow: 0 0 5px #00eeff;
+}
+
+/* unify dropdown button with nav links */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* support both <a> and <button> dropdown triggers */
+.dropdown > a,
+.dropdown .drpbtn {
+  color: white;
+  background: transparent;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  font-family: inherit;
+}
+
+/* hover / focus state matches nav hover */
+.dropdown > a:hover,
+.dropdown .drpbtn:hover,
+.dropdown > a:focus,
+.dropdown .drpbtn:focus {
+  background: rgba(255,255,255,0.12);
+  outline: none;
+}
+
+/* dropdown panel styling (visible below nav) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff; /* white panel for contrast */
+  color: #111;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.12);
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 1200;
+  overflow: hidden;
+}
+
+/* show when hovering or when trigger receives focus (keyboard accessible) */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* menu links inside panel */
+.dropdown-content a {
+  color: #111;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background: #f3f6fb;
+  color: #0a66ff;
+}
+
+.container {
+    display: flex;   
+    justify-content: center;   
+    padding: 10px 20px;   
+    max-width: 1200px; 
+    margin: 0 auto;   
+    flex-wrap: wrap; 
+}
+.car-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin: 0 20px 40px 20px; 
+    min-width: 250px; 
+    flex-grow: 1;
+}
+.car-item img {
+    max-width: 100%; 
+    height: auto;   
+    max-height: 200px; 
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.car-item p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0 15px 0;
+}
+
+
+
+.price{
+    color: #ffa500;
+    padding: 10px 30px;
+    font-weight: bold;
+}
+.rent-button {
+
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+.rent-button:hover {
+    background-color: #0056b3; 
+}
+
+.more-car {
+    align-content: center;
+    text-align: center;
+}
+
+.more-link {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 15px;
+}
+
+.more-link:hover {
+    transition-property: all;
+    transition-duration: 2s;
+    transition: ease-in-out 0.4s;
+    background-color: #2575fc;
+    color: white;
+}
+
+.para-more-car {
+    opacity: 0.7;
+}
+.buttons {
+    align-content: center;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.show-less {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 15px;
+
+}
+.show-less:hover {
+    transition-property: all;
+    transition-duration: 2s;
+    transition: ease-in-out 0.4s;
+    background-color: #2575fc;
+    color: white;
+}
+footer {
+    background-color: #1e73ff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}  
+:root {
+    --primary-blue: #007bff;
+    --light-blue-accent: #008cba;
+    --dark-blue-text: #1a2a46;
+    --icon-bg-color: #e6f0ff; 
+}
+
+.guide-section-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--dark-blue-text);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #6c757d;
+    font-size: 1.1em;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.deal-item {
+    text-align: center;
+    background-color: rgb(159, 196, 250, 0.3);
+    padding: 0px 12px 0px 12px;
+    border-radius: 9px;
+}
+
+.deal-item h3 {
+    color: var(--dark-blue-text);
+    font-size: 1.25em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-shadow: rgb(148, 201, 239) 0.2px 0.2px 0px;
+}
+
+.deal-item p {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+
+
+.illustration-box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--icon-bg-color); 
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.requirement-title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 1.8em;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.requirement-item {
+    padding: 10px 0;
+}
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    background-color: var(--icon-bg-color); 
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--primary-blue);
+}
+
+.requirement-item h4 {
+    font-weight: 700;
+    color: var(--dark-blue-text);
+    margin-bottom: 5px;
+}
+
+.requirement-item p {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+
+.requirement-item a {
+    color: var(--light-blue-accent);
+    text-decoration: none;
+}
+
+.requirement-item a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .deals-grid, .requirements-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .illustration-box {
+        margin: 0 auto;
+    }
+}

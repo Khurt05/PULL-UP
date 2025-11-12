@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page metadata: encoding and responsive viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PULL-UP RENTAL | Payment</title>
+
+  <!-- Page styles: payment-specific CSS (keeps header/nav consistent with site) -->
+  <link rel="stylesheet" href="payment.css">
+
+  <!-- Fonts & icons: used by header and UI -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Site header: logo + navigation (consistent across pages) -->
+  <header class="site-header">
+      <!-- Branding: site name and icon -->
+      <div class="logo-branding">
+          <div class="logo-text">PULL-UP RENTAL</div>
+          <i class="fa-solid fa-car logo-icon" aria-hidden="true"></i>
+      </div>
+
+      <!-- Main navigation: primary links -->
+      <nav class="main-nav" role="navigation" aria-label="Main">
+          <a href="structure.html">HOME</a>
+
+          <!-- Contact dropdown: toggled by script, provides external links -->
+          <div class="dropdown">
+              <button class="drpbtn" aria-haspopup="true" aria-expanded="false">Contact ▾</button>
+              <div class="dropdown-content" role="menu" aria-hidden="true">
+                  <a role="menuitem" href="Facebook.html">Facebook</a>
+                  <a role="menuitem" href="Instagram.html">Instagram</a>
+                  <a role="menuitem" href="Twitter.html">Twitter</a>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+  <!-- Payment section: container for payment form and summary -->
+  <section class="payment-container">
+    <h2 class="payment-title">Payment Details</h2>
+
+    <!-- Payment form: collects payment method and billing info -->
+    <form action="#" method="POST" class="payment-form">
+
+      <!-- Booking summary: shows car/title/price populated from query or previous page -->
+      <div class="summary-box">
+        <h3>Booking Summary</h3>
+        <p><strong></strong></p>
+        <p><strong>:</strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong> <span class="price"></span></p>
+      </div>
+
+      <!-- Payment method selector: shows appropriate input sections via JS -->
+      <div class="form-group">
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" name="payment_method" required>
+          <option value="">-- Select Payment Option --</option>
+          <option value="gcash">GCash</option>
+          <option value="credit-card">Credit / Debit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="cash">Cash on Pick-up</option>
+        </select>
+      </div>
+
+      <!-- GCash inputs: hidden unless chosen -->
+      <div id="gcash-info" class="payment-section hidden">
+        <h4>GCash Payment</h4>
+        <div class="form-group">
+          <label for="gcash-number">GCash Number</label>
+          <input type="tel" id="gcash-number" name="gcash_number" placeholder="09XXXXXXXXX">
+        </div>
+      </div>
+
+      <!-- Card inputs: hidden unless chosen -->
+      <div id="card-info" class="payment-section hidden">
+        <h4>Card Information</h4>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="card-name">Cardholder Name</label>
+            <input type="text" id="card-name" name="card_name" placeholder="Name on Card">
+          </div>
+          <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card_number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="expiry-date">Expiry Date</label>
+            <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY">
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
+          </div>
+        </div>
+      </div>
+
+      <!-- PayPal inputs: hidden unless chosen -->
+      <div id="paypal-info" class="payment-section hidden">
+        <h4>PayPal Payment</h4>
+        <div class="form-group">
+          <label for="paypal-email">PayPal Email</label>
+          <input type="email" id="paypal-email" name="paypal_email" placeholder="your@email.com">
+        </div>
+      </div>
+
+      <!-- Billing email: always required for confirmation/receipt -->
+      <div class="form-group">
+        <label for="billing-email">Billing Email</label>
+        <input type="email" id="billing-email" name="billing_email" placeholder="example@email.com" required>
+      </div>
+
+      <!-- Confirm action: handled by payment.js to show alert then navigate -->
+      <a id="confirm-payment" href="confirmation.html" class="btn-payment">CONFIRM PAYMENT</a>
+    </form>
+  </section>
+
+  <!-- Site scripts:
+       - Scripts/script.js: site-wide UI (search, nav dropdown, rent button)
+       - Scripts/payment.js: payment form behavior and confirm alert -->
+  <script src="Scripts/script.js"></script>
+  <script src="Scripts/payment.js"></script>
+</body>
+</html>

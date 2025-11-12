@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pull-Up Rental</title>
+    
+    <link rel="stylesheet" href="log-in-style.css">     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.html">
+    <script src="auth.js" defer></script>
+    
+
+    
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-branding">
+            <div class="logo-text">PULL-UP RENTAL</div>
+            <i class="fas fa-car logo-icon"></i> 
+        </div>
+
+        <div class="header-filter-area">
+            </div>
+
+        <nav>
+            <a href="sign-up.html">SIGN-UP</a>
+            <a href="home.html">HOME</a> 
+            <a href="about.html">ABOUT</a>
+        </nav>
+    </header>
+    
+    <div class="login-container">
+        <div class="login-form-box">
+            
+            <h2 class="form-title">Login</h2>
+            
+            <form action="#" method="POST" onsubmit="validateLogin(event)" id="loginForm">
+                
+                <div class="input-group">
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" name="password" required>
+                        <i class="far fa-eye password-toggle" onclick="togglePasswordVisibility()"></i>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="login-button">Login <a href=""></a></button>
+                </div>
+                
+            </form>
+            
+            <div class="dont-have-account">
+                Don't have an account? <a href="sign-up.html">Create new</a>
+            </div>
+
+            <div class="or-divider">Or Login with</div>
+
+            <button class="google-login-button">
+                <img src="https://www.google.com/favicon.ico" alt="Google logo"> Sign in with Google
+            </button>
+            
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

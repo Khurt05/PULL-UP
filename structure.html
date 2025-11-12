@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULL-UP RENTAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image" href="image/PULL-UP RENTAL logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+
+        <div class="logo-branding">
+            <a class="logo-branding-link" href="structure.html"><div class="logo-text">PULL-UP RENTAL</div></a>
+            <a href="structure.html"><i class="fa-solid fa-car logo-icon" aria-hidden="true"></i></a>
+        </div>
+
+        <form class="search-bar">
+            <input type="text" name="q" placeholder="Search cars">
+            <button type="submit">🔍</button>
+        </form>
+        <nav>
+            <a href="sign-up.html">SIGN-UP</a>
+            <a href="log-in.html">LOG-IN</a> 
+            <a href="about.html">ABOUT</a>
+
+            <!-- Profile button: visible only when logged in (script will toggle) -->
+            <a href="dashboard.html" id="profileBtn" class="profile-link" style="display:none;" title="My Profile">
+                <i class="fas fa-user-circle"></i> Profile
+            </a>
+
+            <div class="dropdown">
+                <!-- use a button for correct focus/keyboard behavior -->
+                <button class="drpbtn" aria-haspopup="true" aria-expanded="false">Contact ▾</button>
+                <div class="dropdown-content" role="menu" aria-hidden="true">
+                    <a role="menuitem" href="Facebook.html">Facebook</a>
+                    <a role="menuitem" href="Instagram.html">Instagram</a>
+                    <a role="menuitem" href="Twitter.html">Twitter</a>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+<div class="container">
+    <div class="car-item">
+        <img src="image/2021-toyota-hiace.webp" alt="Toyota Hiace" loading="lazy" height="200">
+        <a class="price">&#8369; 4,500</a>
+        <p>TOYOTA HIACE</p>
+        <button class="rent-button">RENT</button>
+    </div>
+    <div class="car-item">
+        <img src="image/hilux.avif" alt="Toyota Hilux" loading="lazy" width="300" height="200">
+        <a class="price">&#8369; 3,500</a>
+        <p>TOYOTA HILUX</p>
+        <button class="rent-button">RENT</button>
+    </div>
+    <div class="car-item">
+        <img src="image/Vios.png" alt="Toyota Vios" loading="lazy">
+        <a class="price">&#8369; 2,500</a>
+        <p>TOYOTA VIOS</p>
+        <button class="rent-button">RENT</button>
+    </div>
+    <div class="car-item">
+        <img src="image/navara.webp" alt="Nissan Navara" loading="lazy">       
+        <a class="price">&#8369; 3,000</a>
+        <p>NISSAN NAVARA</p>
+        <button class="rent-button">RENT</button>
+    </div>
+    <div class="car-item">
+        <img src="image/fortuner.jpg" alt="Toyota Fortuner" loading="lazy">
+        <a class="price">&#8369; 3,000</a>
+        <p>TOYOTA FORTUNER</p>
+        <button class="rent-button">RENT</button>
+    </div>
+    <div class="car-item">
+        <img src="image/almera.jpg" alt="Nissan Almera" loading="lazy">
+        <a class="price">&#8369; 2,500</a>
+        <p>NISSAN ALMERA</p>
+        <button class="rent-button">RENT</button>
+    </div>
+
+    
+</div>
+
+<div class="more-car">
+    <p class="para-more-car">Click "More" to find your car of choice</p>
+    <a class="more-link" href="">MORE</a>
+</div>
+
+    <!-- User guide for end-users -->
+    <div class="guide-section-container">
+
+        <h2 class="section-title">How to find a great car rental deal</h2>
+        <p class="section-subtitle">We'll take care of finding the lowest price for you, but here's what you can do to make sure you get the best deal:</p>
+    
+        <div class="deals-grid">
+            <div class="deal-item">
+                <h3>Book Early</h3>
+                <p>Prices generally rise which it gets closer to the starting date of your trip. Book ahead to save and don't worry, you can always make changes or cancel for free up to 48 hours before pick-up if your plans change.</p>
+            </div>
+            <div class="deal-item">
+
+                <h3>Pay Attention To Reviews</h3>
+                <p>See what previous customers have to say about the rental supplier. Choosing a company with a score of 8 or higher is recommended.</p>
+            </div>
+            <div class="deal-item">
+
+                <h3>Keep the Deposit in Mind</h3>
+                <p>You will have to leave a deposit when you pick up the car. In the rental conditions, you can see how much it will be. Make sure you have enough credit available to cover it.</p>
+            </div>
+            <div class="deal-item">
+
+                <h3>Know the Fuel and Mileage Policies</h3>
+                <p>Avoid costly fees by knowing how much mileage is included in your rental and what the fuel policy is.</p>
+            </div>
+        </div>
+    
+        <h2 class="section-title requirement-title">What do you need to pick up the car?</h2>
+    
+        <div class="requirements-grid">
+            <div class="requirement-item">
+            
+                <h4>Driver's License</h4>
+                <p>A valid driver's license in the name of the main driver. <a href="#">What type of driver's license do I need?</a></p>
+            </div>
+            <div class="requirement-item">
+
+                <h4>Credit Card</h4>
+                <p>A credit card in the name of the main driver with sufficient funds. <a href="#">I don't have a credit card - can I still rent a car?</a></p>
+            </div>
+            <div class="requirement-item">
+                <h4>Identification</h4>
+                <p>A passport or other form of identification. <a href="#">Will I need my passport to pick up a car?</a></p>
+            </div>
+            <div class="requirement-item">
+                <h4>Voucher</h4>
+                <p>A printed Voucher or an e-Voucher, where available. <a href="#">What is a voucher and where can I find it?</a></p>
+            </div>
+        </div>
+    </div>
+    
+        <footer>
+            <p>&copy; 2025 PULL-UP RENTAL all rights reserved</p>
+            <time id="current-time"></time>
+
+        </footer>
+        
+        <script src="Scripts/script.js"></script>
+</body>
+</html>

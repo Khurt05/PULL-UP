@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULL-UP RENTAL</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-car-side" style="color: white;"></i>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <a href="#" class="nav-item active">
+                        <i class="fas fa-chart-line"></i> Dashboard
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-calendar-alt"></i> My Reservations
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-plus-circle"></i> New Booking
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-receipt"></i> Invoices & Receipts
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-user-circle"></i> Profile Settings
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-credit-card"></i> Payment Methods
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-award"></i> Loyalty & Rewards
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-file-alt"></i> My Documents
+                    </a>
+                </div>
+
+                <div class="nav-group bottom-nav">
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-question-circle"></i> Help & Support
+                    </a>
+                    <!-- changed: make logout a single clickable element with id -->
+                    <a href="#" id="logoutBtn" class="nav-item logout">
+                        <i class="fas fa-sign-out-alt"></i> Log Out
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for bookings, cars, or help">
+                </div>
+                <div class="header-actions">
+                    <a href="structure.html" class="home-link" title="Home"><i class="fas fa-home"></i> Home</a>
+                    <i class="fas fa-bell notification-icon"></i>
+                    <img src="https://i.pravatar.cc/150?img=3" alt="User Avatar" class="avatar">
+                    <span class="user-name"></span>
+                    <i class="fas fa-chevron-down dropdown-icon"></i>
+                </div>
+            </header>
+            <section class="dashboard-body">
+                <h1>Welcome Back, <span id="welcomeUser">User</span>!</h1>
+                <p></p>
+                <div class="status-cards">
+                    <div class="card rental-status-card">
+                        <h3>Rental Status <i class="fas fa-car"></i></h3>
+                        <div class="card-content">
+                        </div>
+
+            <main class="content">
+                <h1>Welcome Back, Admin</h1>
+                <p>Your current reservation details will appear here.</p>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <h2>Rental Status</h2>
+                    </div>
+                    <div class="card balance-card">
+                        <h3>Balance <i class="fas fa-wallet"></i></h3>
+                        <div class="card-content">                      
+                        </div>
+                    </div>
+                    <div class="card active-issues-card">
+                        <h3>Active Issues <i class="fas fa-exclamation-triangle"></i></h3>
+                        <div class="card-content">
+                    </div>
+                    
+                    </div>
+                    </div>
+
+                </div>
+        
+        
+
+
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const logoutBtn = document.getElementById('logoutBtn');
+    const welcomeUser = document.getElementById('welcomeUser');
+    const userNameSpan = document.querySelector('.user-name');
+
+    // Get stored user info
+    const storedEmail = localStorage.getItem('userEmail') || sessionStorage.getItem('userEmail');
+    const storedName = storedEmail ? storedEmail.split('@')[0] : 'User';
+
+    // Update UI with username
+    if (userNameSpan) {
+        userNameSpan.textContent = storedEmail || 'User';
+    }
+    if (welcomeUser) {
+        welcomeUser.textContent = storedName;
+    }
+
+    // Remove duplicate welcome message
+    const duplicateWelcome = document.querySelector('main h1');
+    if (duplicateWelcome) {
+        duplicateWelcome.remove();
+    }
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // clear login indicators
+            localStorage.removeItem('loggedIn');
+            sessionStorage.removeItem('loggedIn');
+            localStorage.removeItem('userEmail');
+            sessionStorage.removeItem('userEmail');
+
+            // if the global appAuth helper exists, call it
+            if (window.appAuth && typeof window.appAuth.logout === 'function') {
+                try { window.appAuth.logout(); } catch (err) {}
+            }
+
+            // redirect to home page
+            window.location.href = 'home.html';
+        });
+    }
+});
+</script>
+</body>
+</html>

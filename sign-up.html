@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up - Pull-Up Rental</title>
+    
+    <link rel="stylesheet" href="sign-up.css">     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="userAuth.js" defer></script>
+
+    
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-branding">
+            <a class="logo-branding-link" href="structure.html"><div class="logo-text">PULL-UP RENTAL</div></a>
+            <a href="structure.html"><i class="fas fa-car logo-icon"></i></a> 
+        </div>
+
+        <div class="header-filter-area">
+        </div>
+
+        <nav>
+            <a href="log-in.html">LOG-IN</a>
+            <a href="structure.html">HOME</a> 
+            <a href="about.html">ABOUT</a>
+        </nav>
+    </header>
+    
+    <div class="signup-container">
+        <div class="signup-form-box">
+            
+            <h2 class="form-title">Sign in</h2>
+            
+            <form id="signupForm" onsubmit="handleSignup(event)">
+                
+                <div class="input-group">
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" name="password" required>
+                        <i class="far fa-eye password-toggle" onclick="togglePassword('password')"></i>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm password</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <i class="far fa-eye password-toggle" onclick="togglePassword('confirmPassword')"></i>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="signup-button">Sign up</button>
+                    <a href="log-in.html" class="already-have-account">Already have an account?</a> 
+                </div>
+                
+            </form>
+            
+
+
+            <div class="or-divider">Or Sign in with</div>
+
+            <button class="google-login-button">
+                <img src="https://www.google.com/favicon.ico" alt="Google logo"> Sign in with Google
+            </button>
+            
+        </div>
+    </div>
+
+    <script src="auth.js" defer></script>
+    <script src="signup.js" defer></script>
+    
+</body>
+</html>

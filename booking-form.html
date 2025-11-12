@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="booking-form.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="logo-branding">
+            <div class="logo-text">PULL-UP RENTAL</div>
+        </div>
+
+        <nav>
+            <div class="dropdown">
+                <a href="#" class="drpbtn">Contact ▾</a>
+                <div class="dropdown-content">
+                    <a href="Facebook.html">Facebook</a>
+                    <a href="Instagram.html">Instagram</a>
+                    <a href="Twitter.html">Twitter</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section class="booking-container">
+  <h2 class="booking-title">Reserve Your Ride</h2>
+  
+  <form action="#" method="POST" class="booking-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" name="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="09XXXXXXXXX" required>
+      </div>
+
+      <div class="form-group">
+        <label>Select Car</label>
+        <select name="car" required>
+          <option value="">-- Choose a Car --</option>
+          <option value="toyota-hiace">Toyota Hiace</option>
+          <option value="toyota-fortuner">Toyota Fortuner</option>
+          <option value="toyota-vios">Toyota Vios</option>
+          <option value="nissan-navara">Nissan Navara</option>
+          <option value="nissan-almera">Nissan Almera</option>
+          <option value="honda-accord">Honda Accord</option>
+          <option value="toyota-camry">Toyota Camry</option>
+          <option value="ford-mustang">Ford Mustang</option>
+          <option value="nissan-sentra">Nissan Sentra</option>
+          <option value="mitsubishi-xpander">Mitsubishi Xpander</option>
+          <option value="kia-carnival">Kia Carnival</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Pick-up Date</label>
+        <input type="date" name="pickup_date" required>
+      </div>
+
+      <div class="form-group">
+        <label>Return Date</label>
+        <input type="date" name="return_date" required>
+      </div>
+    </div>
+
+    <div class="form-group full">
+      <label>Pick-up Location</label>
+      <input type="text" name="pickup_location" required>
+    </div>
+
+    <div class="form-group full">
+      <label>Additional Notes</label>
+      <textarea name="notes" rows="3" ></textarea>
+    </div>
+
+    <a href="payment.html" class="btn-book">BOOK NOW</a>
+  </form>
+</section>
+    <script src="booking-form.js"></script>
+
+
+</body>
+</html>
